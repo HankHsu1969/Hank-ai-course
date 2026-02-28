@@ -221,7 +221,28 @@
       .creds { grid-template-columns:1fr; }
       .pricing-card { padding:40px 24px; }
       footer { padding:64px 28px; }
+      .framework-row, .framework-row.reverse { grid-template-columns:1fr; direction:ltr; }
     }
+
+    /* ─── 3-PILLAR FRAMEWORK ─── */
+    .framework-row { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; margin-top:56px; }
+    .framework-row.reverse { direction:rtl; }
+    .framework-row.reverse > * { direction:ltr; }
+    .framework-img { overflow:hidden; position:relative; }
+    .framework-img img { width:100%; display:block; transition:transform .5s; }
+    .framework-img:hover img { transform:scale(1.04); }
+    .framework-img-label {
+      position:absolute; bottom:0; left:0; right:0;
+      background:linear-gradient(to top, rgba(13,13,13,.9) 0%, transparent 100%);
+      padding:32px 24px 20px;
+      font-family:'Space Mono',monospace; font-size:11px;
+      letter-spacing:3px; color:var(--gold);
+    }
+    .framework-num { font-family:'Space Mono',monospace; font-size:64px; font-weight:700; color:rgba(201,168,76,.12); line-height:1; margin-bottom:-12px; }
+    .framework-copy h3 { font-family:'Noto Serif TC',serif; font-size:26px; font-weight:700; margin-bottom:14px; }
+    .framework-copy p { font-size:15px; color:var(--gray); line-height:1.9; margin-bottom:20px; }
+    .framework-tags { display:flex; flex-wrap:wrap; gap:8px; }
+    .ftag { font-family:'Space Mono',monospace; font-size:10px; letter-spacing:2px; padding:5px 14px; border:1px solid rgba(0,0,0,.15); color:var(--gray); }
   </style>
 </head>
 <body>
@@ -232,17 +253,19 @@
     <img src="Hero___AI_科技場景.png" alt="AI 技術視覺" loading="eager">
     <div class="hero-img-overlay">
       <div class="hero-stats">
+        <!--
         <div class="hero-stat"><div class="hero-stat-num">2000+</div><div class="hero-stat-label">結業學員</div></div>
         <div class="hero-stat"><div class="hero-stat-num">40h</div><div class="hero-stat-label">課程時數</div></div>
         <div class="hero-stat"><div class="hero-stat-num">4.9</div><div class="hero-stat-label">學員評分</div></div>
+      -->
       </div>
     </div>
   </div>
 
   <div class="hero-content">
     <span class="badge">⚠ AI 時代生存必修</span>
-    <h1 class="hero-h1">你不學 AI，<br><em>你的工作</em><br>誰來學？</h1>
-    <p class="hero-lead">不需要任何程式基礎。許顯隆 HANK 帶你用 Claude 寫程式、做網頁、分析股市、打造一人電商。</p>
+    <h1 class="hero-h1">我不會程式<br>我不會行銷<br><em>如何利用 AI</em><br>來提升工作效率 !!</h1>
+    <p class="hero-lead">不需要任何程式基礎。許顯隆 HANK 帶你用 Claude 寫程式、做網頁、分析市場、打造一人電商。</p>
     <a href="#pricing" class="btn">立即搶佔席位 →</a>
   </div>
 </header>
@@ -264,22 +287,94 @@
       <div class="pain-card fi">
         <img src="痛點_1___程式碼畫面.png" alt="程式碼畫面" loading="lazy">
         <div class="pain-card-body">
-          <h3>「我不會寫程式」</h3>
-          <p>Claude 讓你用說話的方式下指令，自動生成完整程式碼，技術背景不是門票。</p>
+          <h3>不會寫程式，AI 跟我沒關係</h3>
+          <p>Vibe Coding 讓你用說話的方式下指令，Claude 自動寫出可執行程式。技術不是入場券，判斷力才是。</p>
         </div>
       </div>
       <div class="pain-card fi">
         <img src="痛點_2___股市圖表.png" alt="股市圖表分析" loading="lazy">
         <div class="pain-card-body">
-          <h3>「AI 分析股票太危險？」</h3>
-          <p>當你靠「感覺」選股，別人已用 AI 建立系統性分析框架，產出專業投資報表。</p>
+          <h3>投資還在靠感覺，資訊永遠落後</h3>
+          <p>當你每天手動查財報，別人已用 Claude 建立自動化蒐集框架，每週產出媲美法人的 AI 分析報表。資訊差距就是獲利差距。</p>
         </div>
       </div>
       <div class="pain-card fi">
         <img src="痛點_3___電商購物.png" alt="電商購物場景" loading="lazy">
         <div class="pain-card-body">
-          <h3>「一個人怎麼做電商？」</h3>
-          <p>過去需要設計師、工程師、文案師，現在配合 Claude，數小時完成從建站到上架。</p>
+          <h3>一個人根本沒辦法做電商</h3>
+          <p>過去你需要設計師、工程師、文案師。現在 Claude 就是你的整個團隊。從建站到上架，一個人完成，一週內看到成果。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 3-PILLAR FRAMEWORK ─── -->
+<section class="sec sec-light" aria-labelledby="framework-h">
+  <div class="sec-inner">
+    <span class="tag">課程核心框架</span>
+    <h2 class="sec-h2 fi" id="framework-h">不只教工具——<br>三個維度，完整掌握 AI 商業能力</h2>
+    <p class="fi" style="font-size:16px;color:var(--gray);line-height:1.9;margin-top:16px;max-width:680px;">從思維建立到實作落地，這套框架讓每一個 AI 操作都能對應到真實的商業目標。</p>
+
+    <div style="margin-top:64px; display:flex; flex-direction:column; gap:64px;">
+
+      <!-- PILLAR 1 -->
+      <div class="framework-row fi">
+        <div class="framework-img">
+          <img src="sec-1.png" alt="AI 思維與解題框架">
+          <div class="framework-img-label">PILLAR 01 · 思維層</div>
+        </div>
+        <div class="framework-copy">
+          <div class="framework-num">01</div>
+          <h3>AI 思維 × 解題框架</h3>
+          <p>在動手之前，先建立正確的判斷力。你會學到如何拆解任何商業問題、設定 AI 任務目標、以及掌握「領導 AI」而不是「被 AI 驅動」的核心思維。</p>
+          <p>Prompt Engineering 不是背模板，而是學會像老闆一樣下指令——清晰、有脈絡、可迭代。</p>
+          <div class="framework-tags">
+            <span class="ftag">解題思維</span>
+            <span class="ftag">Prompt 工程</span>
+            <span class="ftag">目標設定</span>
+            <span class="ftag">人機互動四層次</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PILLAR 2 -->
+      <div class="framework-row reverse fi">
+        <div class="framework-img">
+          <img src="sec-2.png" alt="Vibe Coding 實作">
+          <div class="framework-img-label">PILLAR 02 · 實作層</div>
+        </div>
+        <div class="framework-copy">
+          <div class="framework-num">02</div>
+          <h3>Vibe Coding × 實作落地</h3>
+          <p>用對話的方式讓 Claude 寫出完整程式碼——網站、自動化腳本、分析工具，全部親手做出來。你不需要懂語法，你只需要懂你想解決什麼問題。</p>
+          <p>課程涵蓋從零建站、股市數據自動蒐集、電商後台工具、廣告文案生成器，每個模組都有可立即使用的成果。</p>
+          <div class="framework-tags">
+            <span class="ftag">Vibe Coding</span>
+            <span class="ftag">網頁生成</span>
+            <span class="ftag">自動化腳本</span>
+            <span class="ftag">AI 工作流</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PILLAR 3 -->
+      <div class="framework-row fi">
+        <div class="framework-img">
+          <img src="sec-3.png" alt="AI 商業變現">
+          <div class="framework-img-label">PILLAR 03 · 變現層</div>
+        </div>
+        <div class="framework-copy">
+          <div class="framework-num">03</div>
+          <h3>商業變現 × 持續迭代</h3>
+          <p>工具學完不是終點，如何把 AI 能力轉化為收入才是重點。你會學到如何用 AI 分析股市、打造一人電商、快速產出高轉換廣告素材，以及建立能持續運轉的 AI 工作管線。</p>
+          <p>從降低成本、提升效率，到創造全新商機——這三條路，我們都有完整的實戰路線圖。</p>
+          <div class="framework-tags">
+            <span class="ftag">股市 SKILL 分析</span>
+            <span class="ftag">一人電商</span>
+            <span class="ftag">廣告文案</span>
+            <span class="ftag">持續迭代</span>
+          </div>
         </div>
       </div>
     </div>
@@ -366,19 +461,20 @@
         <h2 class="instructor-name" id="instructor-h">許顯隆 <span style="color:var(--gold);font-size:22px;">HANK</span></h2>
         <p class="instructor-role">AI 商業應用導師 ｜ 連續創業者 ｜ 資深投資人</p>
         <p class="instructor-bio">
-          HANK 是台灣最早將 Claude AI 導入商業實戰的先行者之一。
-          從非技術背景出發，如今橫跨電商、投資分析、數位行銷多元事業，
+          HANK 是台灣很早的老程式設計師。
+          從資訊軟體背景出發，如今橫跨 AI 商業實戰、電商經營、數位行銷、廣告拍攝等多個領域
           他將多年積累濃縮成這套可完全複製的 AI 系統課程。
         </p>
         <div class="creds">
-          <div class="cred">10+ 年數位創業與電商運營經驗</div>
-          <div class="cred">累計指導 2,000+ 名學員投入 AI 實戰</div>
-          <div class="cred">Claude AI 深度研究者與推廣者</div>
-          <div class="cred">股市 AI 分析系統開發者</div>
-          <div class="cred">多家企業 AI 轉型顧問</div>
-          <div class="cred">《Claude 實戰者聯盟》社群創辦人</div>
-          <div class="cred">曾任科技新創公司產品總監</div>
-          <div class="cred">知名財經 Podcast 固定來賓</div>
+          <div class="cred">30+ 年 ERP、SQL、Oracle、大型資料庫程式設計經驗</div>
+          <div class="cred">程式語言經歷 Delphi / vb / c++ / FoxPro / Cobol / Python</div>
+          <div class="cred">Moondios美吾家貿易有限公司行銷部副總</div>
+          <div class="cred">Blackmagic Davinci Resolve 官方認證講師 (100+講座)</div>
+          <div class="cred">YOTTA線上學習平台講師</div>
+          <div class="cred">Wecam微電影創作學院副院長</div>
+          <div class="cred">曾任MFC台灣微電影創作學會理事</div>
+          <div class="cred">曾任聯成電腦補習班3DSMAX認證班講師</div>
+          <div class="cred">曾任台南市資訊軟體協會講師</div>
         </div>
       </div>
     </div>
@@ -419,17 +515,21 @@
     <span class="tag" style="display:block;text-align:center;">立即加入</span>
     <h2 class="sec-h2 fi" style="text-align:center;" id="price-h">現在投資自己，<br>比任何時候都值得</h2>
     <div class="pricing-card fi">
-      <span class="pricing-label">完整課程 · 早鳥優惠</span>
-      <div class="pricing-orig">原價 NT$19,800</div>
-      <div class="pricing-price"><sup>NT$</sup>9,800</div>
-      <div class="pricing-note">一次付清 · 終身使用 · 持續更新</div>
+      <span class="pricing-label">初階入門課程 · 早鳥優惠</span>
+      <div class="pricing-orig">原價 NT$1,500</div>
+      <div class="pricing-price"><sup>NT$</sup>500</div>
+      <div class="pricing-note">入門引導課程，手把手實戰課程</div>
+
+      <div class="pricing-price"><sup>日期：2026/3/16 (六)</sup></div>
+      <div class="pricing-price"><sup>地點：台南市</sup></div>
+
       <div class="pricing-features">
-        <div class="pf">六大核心模組，40+ 小時課程</div>
+        <div class="pf">入門課程，手把手教學實戰課程</div>
+        <div class="pf">六大核心模組，4 小時課程</div>
         <div class="pf">HANK 親製 AI Prompt 模板大全</div>
         <div class="pf">股市 SKILL 分析框架工具包</div>
         <div class="pf">一人電商啟動 SOP 手冊</div>
         <div class="pf">專屬學員社群，永久答疑</div>
-        <div class="pf">30 天不滿意退款保證</div>
       </div>
       <a href="#" class="btn btn-block" style="font-size:18px;padding:20px;">我要報名，搶佔席位 →</a>
       <p class="urgency">⚠ 早鳥名額有限，截止後恢復原價</p>
@@ -440,9 +540,9 @@
 <!-- ─── FOOTER CTA ─── -->
 <footer>
   <h2>這個時代，<br><em>不進化就淘汰</em></h2>
-  <p>加入 2,000+ 名學員，今天就開始你的 AI 之旅。</p>
+  <p>今天就開始你的 AI 之旅。</p>
   <a href="#pricing" class="btn" style="font-size:18px;padding:18px 56px;">現在就開始 →</a>
-  <p class="footer-note">© 2025 許顯隆 HANK · AI 實戰課程 · 30天退款保證</p>
+  <p class="footer-note">© 2026 許顯隆 HANK · AI 實戰課程</p>
 </footer>
 
 <script>
